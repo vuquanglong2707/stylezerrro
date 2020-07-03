@@ -1,0 +1,449 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700&display=swap');
+
+/* ===============================================================================
+   Reset css
+   ===============================================================================
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+/* ===============================================================================
+   Default Style
+   ===============================================================================
+*/
+
+.space-top {
+    margin-top: 20px;
+}
+
+.space-all-mg {
+    margin: 10px 10px 10px 10px;
+}
+
+.space-all-pd {
+    padding: 20px 20px 20px 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    transition: .3s ease;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.container {
+    width: 1140px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+.container-fluid {
+    width: 100%;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+a:hover,
+a.active {
+    color: #ff2727;
+}
+
+.flex {
+    display: flex;
+}
+
+.dflex {
+    display: flex;
+    align-items: center;
+}
+
+.dflexs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* ===============================================================================
+   Header
+   ===============================================================================
+*/
+
+header {
+    width: 100%;
+    height: 85px;
+}
+
+header a {
+    color: white;
+}
+
+.header__wrap {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #000;
+    padding: 15px 0;
+    z-index: 999;
+}
+
+
+/* ===============================================================================
+   header menu 
+   ===============================================================================
+*/
+
+
+/* ---------------------------menu logo---------------- */
+
+.menu__logo img {
+    width: 200px;
+    height: 50px;
+}
+
+
+/* ----------------------------menu list----------------- */
+
+header .menu__list .menu__item.main-submenu {
+    position: relative;
+}
+
+.submenu {
+    position: absolute;
+    white-space: nowrap;
+    top: calc(100% + 25px);
+    /* + padding menu__link */
+    background: #fff;
+    display: block;
+    padding: 0px 50px 0px 20px;
+    max-height: 0;
+    /* Transform Effect */
+    overflow: hidden;
+    transition: .5s ease;
+}
+
+header .menu__item {
+    margin: 10px;
+    padding: 10px;
+}
+
+header .menu__item:hover .submenu {
+    padding: 10px 50px 10px 20px;
+    max-height: 50vh;
+}
+
+.submenu .submenu__link {
+    display: block;
+    color: #000;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+    transition: .3s ease;
+}
+
+.submenu .submenu__link:hover {
+    color: #ff2727;
+}
+
+
+/* ----------------------------Megamenu --------------------*/
+
+.megamenu {
+    position: absolute;
+    top: calc(100% + 0.1px);
+    /* + padding Header */
+    left: 0;
+    width: 100%;
+    background: #fff;
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+    padding: 0px;
+    transition: .5s ease;
+    overflow: hidden;
+    max-height: 0;
+    padding: 0px 300px;
+}
+
+.megamenu__item {
+    text-align: center;
+    margin: 0 auto;
+}
+
+header .menu__item:hover .megamenu {
+    max-height: 100vh;
+    transition: .5s ease;
+    padding: 20px 300px;
+}
+
+.megamenu__item a {
+    color: black;
+}
+
+.megamenu__item a p {
+    font-size: 20px;
+    color: #ff2727;
+    margin-right: 15px;
+}
+
+.megamenu__item a:hover {
+    color: red;
+}
+
+
+/* -------------------menu icon -----------------------*/
+
+.header__cart {
+    color: #ff2727;
+}
+
+.header__cart i {
+    margin-right: 10px;
+}
+
+
+/* ===============================================================================
+     content 
+   ===============================================================================
+*/
+
+.content-frame {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu-left {
+    max-width: 15%;
+    flex-basis: 15%;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+.main {
+    max-width: 85%;
+    flex-basis: 85%;
+    background-color: white;
+    padding: 20px;
+}
+
+.menu-left h3:after {
+    background-color: #339999;
+    content: "";
+    display: block;
+    height: 1px;
+    position: relative;
+    width: 50%;
+}
+
+.product {
+    width: 100%;
+}
+
+.product__list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.list__box {
+    max-width: calc(100%/5);
+    flex-basis: calc(100%/5);
+}
+
+.box__items {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.box__items img {
+    width: 100%;
+    height: 300px;
+    transition: transform .5s ease;
+}
+
+.box__items:hover img {
+    transform: scale(1.05);
+}
+
+.box__detail {
+    text-align: center;
+}
+
+.pagination {
+    text-align: center;
+}
+
+.pagination a {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination a.active {
+    background-color: black;
+    color: white;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+.pg-button {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+}
+
+.pg-red {
+    color: #fff!important;
+    background-color: #f44336!important
+}
+
+
+/* start Rating stars */
+
+input.star {
+    display: none;
+}
+
+label.star {
+    float: right;
+    color: #444;
+    transition: all .2s;
+    font-size: 30px;
+    margin-left: 5px;
+}
+
+input.star:checked~label.star:before {
+    content: '\f005';
+    color: #FD4;
+    transition: all .25s;
+}
+
+input.star-5:checked~label.star:before {
+    color: #FE7;
+    text-shadow: 0 0 10px #952;
+}
+
+input.star-1:checked~label.star:before {
+    color: #F62;
+}
+
+label.star:hover {
+    transform: rotate(-15deg) scale(1.3);
+}
+
+label.star:before {
+    content: '\f006';
+    font-family: FontAwesome;
+}
+
+
+/* how to know */
+
+.knowledge>h2::after {
+    background-color: #339999;
+    content: "";
+    display: block;
+    height: 1px;
+    width: 20%;
+}
+
+.list__boxkl {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.list__boxkl .boxkl-item {
+    max-width: calc(100%/3);
+    flex-basis: calc(100%/3);
+}
+
+.list__boxkl .boxkl-item .item__img-kl {
+    width: 100%;
+    height: 400px;
+}
+
+.list__boxkl .boxkl-item .item__img-kl img {
+    width: 95%;
+    height: 400px;
+    margin: 0 auto;
+}
+
+.list__boxkl .boxkl-item .box__detail-kl {
+    padding: 10px 20px;
+}
+
+.list__boxkl .boxkl-item .box__detail-kl .detail-kl {
+    text-align: center;
+}
+
+
+/* End Rating stars */
+
+
+/* ===============================================================================
+   footer 
+   ===============================================================================
+*/
+
+.footer-top {
+    border-top: 1px solid black;
+    width: 100%;
+}
+
+.ft-list {
+    display: flex;
+}
+
+.ft-list .sv {
+    display: flex;
+    padding: 25px 25px;
+}
+
+.footer-body {
+    width: 100%;
+    background-color: black;
+}
+
+.ft-banner {
+    display: flex;
+}
+
+.ft-banner .form-Email {
+    line-height: 20vh;
+    padding-left: 40px;
+}
+
+.list-info {
+    display: flex;
+}
+
+.info__items {
+    padding: 25px 25px;
+    margin: 0 auto;
+}
+
+@media only screen and (max-width: 1000px) {
+    body {
+        width: 1500px;
+    }
+}
